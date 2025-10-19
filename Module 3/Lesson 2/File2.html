@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML приклад</title>
+</head>
+<body>
+  <h1>1. Що таке HTML?</h1>
+  <p>HTML (HyperText Markup Language) — це мова розмітки, а не мова програмування. Її мета — не виконувати логіку, а надавати структуру та сенс вмісту веб-сторінки. HTML є скелетом, який утримує всі елементи на сторінці.</p>
+  <p>Коли ваш браузер отримує HTML-документ від сервера, він "читає" розмітку і відображає її відповідно до визначених правил.</p>
+
+  <h1>2. Основні поняття HTML</h1>
+  <p><strong>Елемент:</strong> Це базовий будівельний блок HTML. Він складається з:</p>
+  <ul>
+    <li>Тегу, що відкриває (<code>&lt;p&gt;</code>): Початок елемента.</li>
+    <li>Тегу, що закриває (<code>&lt;/p&gt;</code>): Кінець елемента.</li>
+    <li>Вмісту: Інформація всередині тегів.</li>
+    <li>Атрибутів: Додаткова інформація про елемент.</li>
+  </ul>
+
+  <p>Приклад:</p>
+  <pre>
+&lt;a href="https://example.com"&gt;Цей текст - посилання&lt;/a&gt;
+  </pre>
+  <p>
+    <a href="https://example.com">Цей текст - посилання</a>
+  </p>
+
+  <p><strong>Вкладеність (Nesting):</strong> Елементи можуть міститися один в одному.</p>
+  <pre>
+&lt;div&gt;
+  &lt;h1&gt;Заголовок&lt;/h1&gt;
+  &lt;p&gt;Це текст в абзаці.&lt;/p&gt;
+&lt;/div&gt;
+  </pre>
+
+  <h1>3. Структура HTML-документа (Бойлерплейт)</h1>
+  <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Назва моєї сторінки&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+  &lt;p&gt;Це мій перший HTML-документ.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+  <ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code>: Вказує, що це HTML5 документ.</li>
+    <li><code>&lt;html&gt;</code>: Кореневий елемент сторінки.</li>
+    <li><code>&lt;head&gt;</code>: Містить метадані (назву, кодування, стилі).</li>
+    <li><code>&lt;title&gt;</code>: Назва сторінки у вкладці браузера.</li>
+    <li><code>&lt;body&gt;</code>: Основний вміст сторінки.</li>
+  </ul>
+
+  <h1>4. Найпоширеніші HTML-теги</h1>
+  <h2>Заголовки:</h2>
+  <pre>
+&lt;h1&gt;Найбільший заголовок&lt;/h1&gt;
+&lt;h6&gt;Найменший заголовок&lt;/h6&gt;
+  </pre>
+  <h1>H1 Заголовок</h1>
+  <h6>H6 Заголовок</h6>
+
+  <h2>Параграфи:</h2>
+  <pre>
+&lt;p&gt;Це звичайний текст абзацу.&lt;/p&gt;
+  </pre>
+  <p>Це звичайний текст абзацу.</p>
+
+  <h2>Посилання:</h2>
+  <pre>
+&lt;a href="https://example.com"&gt;Перейти&lt;/a&gt;
+  </pre>
+  <a href="https://example.com">Перейти</a>
+
+  <h2>Зображення:</h2>
+  <pre>
+&lt;img src="https://via.placeholder.com/150" alt="Демо-зображення"&gt;
+  </pre>
+  <img src="https://via.placeholder.com/150" alt="Демо-зображення">
+
+  <h2>Списки:</h2>
+  <pre>
+&lt;ul&gt;
+  &lt;li&gt;Елемент 1&lt;/li&gt;
+  &lt;li&gt;Елемент 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Перший&lt;/li&gt;
+  &lt;li&gt;Другий&lt;/li&gt;
+&lt;/ol&gt;
+  </pre>
+  <ul>
+    <li>Елемент 1</li>
+    <li>Елемент 2</li>
+  </ul>
+  <ol>
+    <li>Перший</li>
+    <li>Другий</li>
+  </ol>
+
+  <h2>Блочні та рядкові елементи:</h2>
+  <pre>
+&lt;div&gt;Це блочний контейнер&lt;/div&gt;
+&lt;span&gt;Це рядковий контейнер&lt;/span&gt;
+  </pre>
+  <div style="border:1px solid #aaa; padding:5px; margin-bottom:5px;">Це блочний контейнер</div>
+  <span style="border:1px solid #aaa; padding:3px;">Це рядковий контейнер</span>
+</body>
+</html>
