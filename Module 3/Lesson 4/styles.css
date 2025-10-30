@@ -1,0 +1,81 @@
+/* Селектор елемента: p { ... } — застосовується до всіх <p>.
+
+Селектор класу: .my-class { ... } — застосовується до всіх елементів з атрибутом class="my-class".
+
+Селектор ID: #my-id { ... } — застосовується до елемента з атрибутом id="my-id". ID має бути унікальним на сторінці */
+
+
+
+
+/* 5. Найпоширеніші CSS-властивості
+Кольори:
+
+    color: Колір тексту.
+
+    background-color: Колір фону.
+
+Шрифти:
+
+    font-family: Тип шрифту (наприклад, Arial, sans-serif).
+
+    font-size: Розмір шрифту (наприклад, 16px).
+
+    font-weight: Насиченість шрифту (наприклад, bold).
+
+Відступи та рамки:
+
+    margin: Зовнішній відступ між елементом та іншими елементами.
+
+    padding: Внутрішній відступ між вмістом елемента та його рамкою.
+
+    border: Рамка навколо елемента. */
+
+
+form label,
+form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+h1 {
+  color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+
+.box {
+    border: 1px solid black;
+    padding: 20px; /* Внутрішній відступ */
+    margin: 10px;  /* Зовнішній відступ */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Центрує елементи по горизонталі */
+    align-items: center;     /* Центрує елементи по вертикалі */
+    height: 100vh; /* Робить контейнер на весь екран по висоті */
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #c68282;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Вирівнюємо по висоті екрана */
+    flex-direction: column; /* Розташовуємо елементи у стовпчик */
+}
+
+#enterBtn {
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #6c30ce;
+    border-style: double;
+}
+
+
+
