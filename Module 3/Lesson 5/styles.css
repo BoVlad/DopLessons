@@ -1,0 +1,43 @@
+/*  @media: Ключове слово.
+
+    screen: Тип пристрою (екран). Також можна вказати print для принтерів.
+
+    and (min-width: 600px): Умова. min-width означає "мінімальна ширина" — тобто, якщо екран більший або дорівнює 600px. */
+
+@media screen and (min-width: 768px) {
+    body {
+        font-family: sans-serif;
+        background-color: #c68282;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Вирівнюємо по висоті екрана */
+        flex-direction: column; /* Розташовуємо елементи у стовпчик */
+        transform: scale(1.7);
+        transform-origin: center;
+    }
+}
+
+
+.box {
+    border: 1px solid black;
+    padding: 20px; /* Внутрішній відступ */
+    margin: 10px;  /* Зовнішній відступ */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Центрує елементи по горизонталі */
+    align-items: center;     /* Центрує елементи по вертикалі */
+    height: 100vh; /* Робить контейнер на весь екран по висоті */
+}
+
+@media screen and (max-width: 768px) {
+    /* Стилі, що застосовуються, коли ширина екрана становить 600px або більше */
+    body {
+        background-color: lightgreen;
+        margin: 32;
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+}
