@@ -49,7 +49,10 @@ posts = [
 def show_blog_list():
     # Передаємо весь список постів у 
     # Ваш код
-    return render_template("blog_list.html", posts=posts)
+    try:
+        return render_template("blog_list.html", posts=posts)
+    except NameError as e:
+        return render_template("blog_list.html", posts=[])
 
 # Маршрут для детального перегляду одного посту
 # <int:post_id> - це динамічна частина URL, яка очікує ціле число
