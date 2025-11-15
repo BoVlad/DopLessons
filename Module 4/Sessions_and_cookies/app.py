@@ -30,6 +30,7 @@
 # Імпортувати об'єкт session з Flask. Цей об'єкт поводиться як словник, і ви можете додавати, змінювати або видаляти дані.
 
 from flask import Flask, render_template, request, redirect, url_for, session
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "sosiska48A*liK2[op02}L/a"
@@ -49,7 +50,10 @@ def login():
     password = request.form.get('password')
     if username == "user" and password == "pass":
         session['username'] = username
-        return redirect(url_for('index'))
+        responce = redirect(url_for('index'))
+        now_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        responce.set_cookie('last_login', now_time)
+        return responce
     else:
         return "Невірні облікові дані", 401
 
