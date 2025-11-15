@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
+app.secret_key = "sosiska48A*liK2[op02}L/a"
 
 # Імітація бази даних (список словників)
 notes = [
@@ -74,6 +75,26 @@ def delete_note(note_id):
     
     return redirect(url_for('index'))
 
+@app.get('/login')
+def login_form():
+    return render_template('login.html')
+
+@app.post('/login')
+def login():
+    username = request.form.get('username')
+    password = request.form.get('password')
+    
+    # Проста перевірка (у реальному додатку використовуйте базу даних)
+    if username == 'admin' and password == 'password':
+        session['username'] = username
+        return redirect(url_for('index'))
+    else:
+        return "Невірні облікові дані", 401
+
+@app.get('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
