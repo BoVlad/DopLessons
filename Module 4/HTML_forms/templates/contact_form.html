@@ -12,19 +12,36 @@
     <div class="container mt-5" style="max-width: 600px;">
         <h2 class="text-center mb-4">Зворотний зв'язок</h2>
         <form method="POST" action="/submit_feedback">
+            {{ form.hidden_tag() }}
             <div class="mb-3">
-                <label for="name" class="form-label">Ваше ім'я <i class="bi bi-heart"></i> </label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <!-- <label for="name" class="form-label">Ваше ім'я <i class="bi bi-heart"></i> </label>
+                <input type="text" class="form-control" id="name" name="name" required> -->
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control", placeholder="Ваше ім'я") }}
+                {% for error in form.name.errors %}
+                    <div class="text-danger small">{{ error }}</div>
+                {% endfor %}
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Електронна пошта</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <!-- <label for="email" class="form-label">Електронна пошта</label>
+                <input type="email" class="form-control" id="email" name="email" required> -->
+                {{ form.email.label(class="form-label") }}
+                {{ form.email(class="form-control", placeholder="Електронна пошта") }}
+                {% for error in form.email.errors %}
+                    <div class="text-danger small">{{ error }}</div>
+                {% endfor %}
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label">Повідомлення</label>
-                <textarea class="form-control" id="message1" name="message" rows="4" required minlength="10" maxlength="500"></textarea>
+                <!-- <label for="message" class="form-label">Повідомлення</label>
+                <textarea class="form-control" id="message1" name="message" rows="4" required minlength="10" maxlength="500"></textarea> -->
+                {{ form.message.label(class="form-label") }}
+                {{ form.message(class="form-control", placeholder="Повідомлення", id="field3") }}
+                {% for error in form.message.errors %}
+                    <div class="text-danger small">{{ error }}</div>
+                {% endfor %}
             </div>
-            <button type="submit" class="btn btn-primary w-100">Надіслати</button>
+            <!-- <button type="submit" class="btn btn-primary w-100">Надіслати</button> -->
+            {{ form.submit(class="btn btn-primary w-100") }}
         </form>
     </div>
 </body>
