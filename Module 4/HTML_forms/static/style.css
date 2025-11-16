@@ -1,5 +1,20 @@
-textarea {
-    width: 300px;
+#message1 {
     height: 200px;
     resize: none;
 }
+
+
+.btn-primary {
+    transition: transform 0.2s ease-in-out ;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+
+
+
+
+
