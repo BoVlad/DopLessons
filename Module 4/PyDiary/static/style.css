@@ -1,0 +1,42 @@
+/* #field3 {
+    height: 200px;
+    resize: none;
+}
+
+
+.btn-primary {
+    transition: transform 0.2s ease-in-out ;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+} */
+
+
+.bg-img {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.bg2-img {
+    background-image: url("bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+
+.strong-shadow {
+    box-shadow: 0 6px 30px rgba(0,0,0,0.55);
+}
+
+
+
